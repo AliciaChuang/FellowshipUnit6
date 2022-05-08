@@ -8,7 +8,18 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    var alpha_str = str.split('').filter(function(value, index, arr){ 
+        if (/^[A-Z]$/i.test(value)){
+            return value;
+        }
+    });
+
+    for (let i = 0; i < Math.ceil(alpha_str.length/2); i++){
+        if (alpha_str[i].toLowerCase() != alpha_str[alpha_str.length - i - 1].toLowerCase()){
+            return false;
+        }
+    }
+    return true;
 }
 
 const tests = [

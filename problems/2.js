@@ -7,7 +7,10 @@
  * @example ["Chase", "Raman"] -> ["Hi Chase", "Hi Raman"]
  */
 function problem(names) {
-    return null;
+    lst = names.map(function(name) {
+        return "Hi " + name;
+    });
+    return lst;
 }
 
 const tests = [

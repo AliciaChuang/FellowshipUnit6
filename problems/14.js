@@ -7,7 +7,19 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    var count = {};
+    for (let num of numbers) {
+        if (count[num]) {
+            count[num] += 1;
+            if (count[num] > Math.floor(numbers.length/2)){
+                return num;
+            }
+        } 
+        else {
+            count[num] = 1;
+        }
+    }
+
 }
 
 const tests = [
